@@ -3,12 +3,15 @@ export const styles = {
     display: 'flex',
     flexDirection: 'column',
     maxWidth: 375,
+    height: '100%',
     flexGrow: 1,
-    alignItems: 'center',
+    alignItems: 'left',
     margin: 'auto',
+    color: '#2C3E50',
   },
   username: {
-    flexGrow: 1,
+    textTransform: 'uppercase',
+    alignSelf: 'flex-start'
   },
   userType: {
     display: 'flex',
