@@ -33,7 +33,6 @@ class AboutUser extends Component {
       </div>
     )
   }
-
 }
 
 AboutUser.propTypes = {

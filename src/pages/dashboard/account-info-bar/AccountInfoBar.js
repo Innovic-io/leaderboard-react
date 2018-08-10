@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { styles } from './styles';
-import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
-import Avatar from '@material-ui/core/Avatar';
 import AboutUser from "./about-user/AboutUser";
+
+import { withStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
 
 class AccountInfoBar extends Component {
 
@@ -21,7 +22,6 @@ class AccountInfoBar extends Component {
       </div>
     )
   }
-
 }
 
 AccountInfoBar.propTypes = {
