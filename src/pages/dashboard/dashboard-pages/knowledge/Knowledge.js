@@ -15,7 +15,7 @@ class Knowledge extends Component {
 
     return (
       <div>
-        <Grid>
+        <Grid container>
 
         </Grid>
       </div>
