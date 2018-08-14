@@ -6,6 +6,7 @@ import { styles } from './styles';
 import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
+import TabsCard from "../../../../components/tabs-card/TabsCard";
 
 class Knowledge extends Component {
 
@@ -15,8 +16,10 @@ class Knowledge extends Component {
 
     return (
       <div>
-        <Grid container>
-
+        <Grid container className={classes.root}>
+          <Grid item>
+            <TabsCard/>
+          </Grid>
         </Grid>
       </div>
 

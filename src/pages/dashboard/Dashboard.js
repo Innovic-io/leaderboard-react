@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom'
 
-import {styles} from './styles';
-import {getUser} from "../../services/user.services";
+import { styles } from './styles';
+import { getUser } from "../../services/user.services";
 
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import AccountInfoBar from "./dashboard-components/account-info-bar/AccountInfoBar";
 import SecondaryMenu from "../../components/secondary-menu/SecondaryMenu";
 import Exam from "../exam/Exam";
@@ -43,7 +43,7 @@ class Dashboard extends Component {
 
   render() {
 
-    const {classes} = this.props;
+    const { classes } = this.props;
 
     return (
       <div>
@@ -61,6 +61,9 @@ class Dashboard extends Component {
         <div>
           <div className={classes.menu}>
             <SecondaryMenu/>
+          </div>
+          <div>
+            <Knowledge/>
           </div>
         </div>
       </div>

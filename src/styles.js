@@ -3,7 +3,7 @@ export const styles = {
     margin: '0px auto',
     maxWidth: '1100px',
     background: '#ECF0F1',
-    height: '100%',
+    minHeight: 'calc(100% - 90px)',
   },
   root: {
     display: 'flex',

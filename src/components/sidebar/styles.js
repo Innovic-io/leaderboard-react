@@ -2,8 +2,9 @@ export const styles = {
   sidebar: {
     backgroundColor: '#34495E',
     width: 200,
-    height: '-webkit-fill-available',
+    height: '100%',
     padding: 0,
+    minHeight: '-webkit-fill-available',
   },
   list: {
     width: 200,

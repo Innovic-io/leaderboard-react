@@ -10,10 +10,18 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Tabs from "../../../node_modules/@material-ui/core/Tabs/Tabs";
-import Tab from "../../../node_modules/@material-ui/core/Tab/Tab";
+import Tabs from '@material-ui/core/Tabs';
+
 
 class TabsCard extends Component {
+
+  state = {
+    value: 0,
+  };
+
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
 
   render() {
 
@@ -27,15 +35,12 @@ class TabsCard extends Component {
               value={this.state.value}
               onChange={this.handleChange}
               fullWidth
-              indicatorColor="secondary"
+              indicatorColor='none'
               textColor="secondary"
             >
-              <Tab label="RECENTS"/>
-              <Tab label="FAVORITES"/>
-              <Tab label="NEARBY"/>
             </Tabs>
           </CardMedia>
-          <CardContent>
+          <CardContent className={classes.content}>
             content
           </CardContent>
           <CardActions>

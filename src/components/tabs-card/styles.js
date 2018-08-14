@@ -1,10 +1,21 @@
 export const styles = {
   card: {
-    maxWidth: 325,
+    width: 325,
     maxHeight: 345,
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 10,
   },
   media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
   },
+  content: {
+    flexGrow: 1,
+    height: 255,
+  },
+  actions: {
+    flexGrow: 1,
+  },
+  button: {
+    height: 90,
+  }
 };

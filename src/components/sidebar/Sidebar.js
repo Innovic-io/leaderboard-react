@@ -1,20 +1,20 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
 import LoggedInUser from "./user/LoggedInUser";
 import SidebarItem from "./item/SidebarItem";
-import {styles} from './styles';
+import { styles } from './styles';
 
 class Sidebar extends Component {
 
   render() {
 
-    const {classes, user, avatar} = this.props;
+    const { classes, user, avatar } = this.props;
 
     return (
       <div className={classes.sidebar}>
