@@ -16,14 +16,14 @@ class Knowledge extends Component {
 
     this.state = {
       tab1: {
-        number: 12,
-        label: 'done courses',
-        background: '#ECF0F1',
+        number: 0,
+        label: '',
+        content: []
       },
       tab2: {
-        number: 3,
-        label: 'unfinished courses',
-        background: '#ECF0F1',
+        number: 0,
+        label: '',
+        content: []
       }
     }
   }
@@ -31,12 +31,21 @@ class Knowledge extends Component {
   componentDidMount() {
 
     getTabContent().then(data => {
+
+      const finishedCourses = data.data.filter(value => value.finished === true);
+      const unfinishedCourses = data.data.filter(value => value.finished === false);
+
       this.setState({
-        name: data.name,
-        avatar: data.avatar,
-        userType: data.userType,
-        expo: data.exp,
-        rating: data.rating
+        tab1: {
+          number: finishedCourses.length,
+          label: 'done courses',
+          content: finishedCourses
+        },
+        tab2: {
+          number: unfinishedCourses.length,
+          label: 'unfinished courses',
+          content: unfinishedCourses
+        }
       })
     });
   }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import NumberLabel from "./number-label-component/NumberLabel";
+import TabItemButton from "./tab-item-button/TabItemButton";
 import { styles } from './styles';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -9,8 +11,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Tabs from '@material-ui/core/Tabs';
-import NumberLabel from "./number-label-component/NumberLabel";
-
 
 class TabsCard extends Component {
 
@@ -42,10 +42,14 @@ class TabsCard extends Component {
               <NumberLabel onClick={(event) => this.handleChange(event, 1)} tab={tab2}/>
             </Tabs>
           </div>
-          <CardContent className={classes.content}>
-            content
-          </CardContent>
-          <CardActions style={{ justifyContent: 'flex-end' }}>
+          <div className={classes.content}>{
+            (this.state.value === 0) ?
+              tab1.content.map((item, index) => (<TabItemButton key={index} content={item}/>))
+              :
+              tab2.content.map((item, index) => (<TabItemButton key={index} content={item}/>))
+          }
+          </div>
+          <CardActions className={classes.actions}>
             <Button size="small" color="primary">
               Learn More
             </Button>
