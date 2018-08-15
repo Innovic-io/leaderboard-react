@@ -14,6 +14,16 @@ export const styles = {
   actions: {
     flexGrow: 1,
     justifyContent: 'flex-end',
-    height: 30
+    height: 30,
   },
+  icon: {
+    height: 10,
+    width: 10,
+    flexGrow: 1,
+    textAlign: 'center',
+    margin: 5
+  },
+  button: {
+    alignItems: 'initial'
+  }
 };

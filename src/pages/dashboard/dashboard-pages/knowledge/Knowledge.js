@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 import TabsCard from "./knowledge-components/tabs-card/TabsCard";
-import { getTabContent } from '../../../../services/knowledge.services';
+import { getCourses } from '../../../../services/knowledge.services';
 
 class Knowledge extends Component {
 
@@ -30,7 +30,7 @@ class Knowledge extends Component {
 
   componentDidMount() {
 
-    getTabContent().then(data => {
+    getCourses().then(data => {
 
       const finishedCourses = data.data.filter(value => value.finished === true);
       const unfinishedCourses = data.data.filter(value => value.finished === false);
@@ -58,6 +58,12 @@ class Knowledge extends Component {
     return (
       <div>
         <Grid container className={classes.root}>
+          <Grid item>
+            <TabsCard tab1={this.state.tab1} tab2={this.state.tab2}/>
+          </Grid>
+          <Grid item>
+            <TabsCard tab1={this.state.tab1} tab2={this.state.tab2}/>
+          </Grid>
           <Grid item>
             <TabsCard tab1={this.state.tab1} tab2={this.state.tab2}/>
           </Grid>

@@ -5,7 +5,7 @@ export function getTabInfo() {
 
 }
 
-export function getTabContent() {
+export function getCourses() {
 
   return fetch('http://www.mocky.io/v2/5b74208c3500006c02531dd2')
     .then(response => response.json())

@@ -1,3 +1,6 @@
 export const styles = {
-  root: {}
+  root: {
+    display: 'flex',
+    flexDirection: 'row'
+  }
 };
