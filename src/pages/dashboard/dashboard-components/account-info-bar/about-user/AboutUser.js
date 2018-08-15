@@ -10,7 +10,7 @@ class AboutUser extends Component {
 
   render() {
 
-    const {username, classes, usertype, expo, rating} = this.props;
+    const { username, classes, usertype, expo } = this.props;
 
     return (
       <div className={classes.root}>

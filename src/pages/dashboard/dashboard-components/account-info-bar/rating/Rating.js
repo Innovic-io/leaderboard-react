@@ -8,7 +8,7 @@ class Rating extends Component {
 
   render() {
 
-    const { classes, rating } = this.props;
+    const { classes } = this.props;
 
     return (
       <div className={classes.root}>

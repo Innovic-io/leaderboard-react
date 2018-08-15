@@ -6,8 +6,6 @@ export const styles = {
     flexDirection: 'column',
     margin: 10,
   },
-  media: {
-  },
   content: {
     flexGrow: 1,
     height: 255,
@@ -15,7 +13,4 @@ export const styles = {
   actions: {
     flexGrow: 1,
   },
-  button: {
-    height: 90,
-  }
 };
